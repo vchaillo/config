@@ -1,0 +1,47 @@
+autoload -U compinit
+compinit
+autoload -U promptinit
+promptinit
+autoload up-line-or-beginning-search
+
+zle -N up-line-or-beginning-search
+
+bindkey '^[[3~' delete-char
+bindkey '^[[A' up-line-or-beginning-search
+
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+alias gccw="gcc -Wall -Werror -Wextra"
+alias norw="norminette --CheckForbiddenSourceHeader"
+alias ll="ls -l"
+alias la="ls -la"
+alias rmd="rm -rf"
+alias gitchk="git ls-tree --full-tree -r HEAD"
+
+PATH=$HOME/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/usr/local/mysql/bin
+HISTFILE=~/.zshrc_history
+SAVEHIST=5000
+HISTSIZE=5000
+
+ZSH_THEME="oscarus"
+
+setopt inc_append_history
+setopt share_history
+
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2
+eval "$(dircolors -b)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'

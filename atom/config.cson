@@ -1,0 +1,22 @@
+"*":
+  autosave:
+    enabled: true
+  core:
+    autoHideMenuBar: true
+    packagesWithKeymapsDisabled: []
+    telemetryConsent: "limited"
+    themes: [
+      "atom-dark-ui"
+      "monokai"
+    ]
+    uriHandlerRegistration: "always"
+  editor:
+    showInvisibles: true
+  "exception-reporting":
+    userId: "b72e9372-5541-47bf-81a6-b5b003aeb9a3"
+  "git-diff":
+    showIconsInEditorGutter: true
+  github:
+    showDiffIconGutter: true
+  welcome:
+    showOnStartup: false

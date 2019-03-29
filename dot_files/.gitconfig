@@ -1,0 +1,29 @@
+ [user] 
+	email = valentin.chaillou@pandacraft.com
+    name = vchaillo 
+
+ [alias] 
+    c  = commit -am
+    ci = commit 
+    co = checkout 
+    st = status 
+    br = branch
+    ls = ls-files
+    pul = pull origin master
+    p = push origin master
+[branch]
+	autosetuprebase = always
+[core]
+	autocrlf = input
+	editor = vim
+[merge]
+	ff = false
+	tool = meld
+[pull]
+	rebase = true
+[rerere]
+	enabled = true
+[status]
+	showUntrackedFiles = all
+[push]
+	default = simple

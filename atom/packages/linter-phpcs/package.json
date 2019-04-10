@@ -1,0 +1,221 @@
+{
+  "_from": "https://www.atom.io/api/packages/linter-phpcs/versions/1.6.13/tarball",
+  "_id": "linter-phpcs@1.6.13",
+  "_inBundle": false,
+  "_integrity": "sha512-4CxvFnt83TlxhLbZVvJs7ga52Vgj3Irkmnto8x9KCEfw9sceScbQyWT1b2BXzLwcEqlCa8K+KZvS/xlmLuF4zQ==",
+  "_location": "/linter-phpcs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/linter-phpcs/versions/1.6.13/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/linter-phpcs/versions/1.6.13/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/linter-phpcs/versions/1.6.13/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/linter-phpcs/versions/1.6.13/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/linter-phpcs/versions/1.6.13/tarball",
+  "_shasum": "b75db67c19a5a528832d26c33170079e32b808f4",
+  "_spec": "https://www.atom.io/api/packages/linter-phpcs/versions/1.6.13/tarball",
+  "_where": "C:\\Users\\VCHAIL~1\\AppData\\Local\\Temp\\apm-install-dir-119310-10476-113b0ao.aop",
+  "bugs": {
+    "url": "https://github.com/AtomLinter/linter-phpcs/issues"
+  },
+  "bundleDependencies": false,
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "configSchema": {
+    "executablePath": {
+      "type": "string",
+      "default": "phpcs",
+      "description": "Enter the path to your phpcs executable.",
+      "order": 1
+    },
+    "autoExecutableSearch": {
+      "title": "Search for executables",
+      "type": "boolean",
+      "default": true,
+      "description": "Automatically search for any `vendor/bin/phpcs.bat` or `vendor/bin/phpcs` executable. Overrides the exectuable defined above.",
+      "order": 2
+    },
+    "codeStandardOrConfigFile": {
+      "type": "string",
+      "default": "PSR2",
+      "description": "Enter path to config file or a predefined coding standard name.",
+      "order": 3
+    },
+    "disableWhenNoConfigFile": {
+      "type": "boolean",
+      "default": false,
+      "description": "Disable the linter when the default configuration file is not found.",
+      "order": 4
+    },
+    "autoConfigSearch": {
+      "title": "Search for configuration files",
+      "type": "boolean",
+      "default": true,
+      "description": "Automatically search for any `phpcs.xml`, `phpcs.xml.dist`, `phpcs.ruleset.xml` or `ruleset.xml` file to use as configuration. Overrides custom standards defined above.",
+      "order": 5
+    },
+    "ignorePatterns": {
+      "type": "array",
+      "default": [
+        "**/*.blade.php",
+        "**/*.twig.php"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "description": "Enter Glob patterns to ignore when running PHPCS.",
+      "order": 6
+    },
+    "displayErrorsOnly": {
+      "type": "boolean",
+      "default": false,
+      "description": "Ignore warnings and display errors only.",
+      "order": 7
+    },
+    "warningSeverity": {
+      "type": "integer",
+      "default": 1,
+      "description": "Set the warning severity level. Available when \"Display Errors Only\" is not checked.",
+      "order": 8
+    },
+    "tabWidth": {
+      "type": "integer",
+      "default": 1,
+      "minimum": 1,
+      "description": "Set the number of spaces that tab characters represent to PHPCS.",
+      "order": 9
+    },
+    "showSource": {
+      "type": "boolean",
+      "default": true,
+      "description": "Show source in message.",
+      "order": 10
+    },
+    "excludedSniffs": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "description": "Command separated list of Sniffs to ignore. Ignored below PHPCS v2.6.2.",
+      "order": 11
+    },
+    "otherLanguages": {
+      "type": "object",
+      "collapsed": true,
+      "description": "If properly configured, PHPCS can run external tools to lint languages other than PHP. Only enable the below options if you have set this up.",
+      "order": 12,
+      "properties": {
+        "useCSSTools": {
+          "title": "Enable CSS Tools",
+          "description": "Enable sending CSS files to configured tools. **Requires configuration**",
+          "type": "boolean",
+          "default": false
+        },
+        "useJSTools": {
+          "title": "Enable JS Tools",
+          "description": "Enable sending JS files to configured tools. **Requires configuration**",
+          "type": "boolean",
+          "default": false
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "atom-linter": "10.0.0",
+    "atom-package-deps": "5.0.0",
+    "minimatch": "3.0.4",
+    "semver": "6.0.0"
+  },
+  "deprecated": false,
+  "description": "Lint PHP on the fly, using phpcs",
+  "devDependencies": {
+    "@commitlint/cli": "7.5.2",
+    "@commitlint/config-conventional": "7.5.0",
+    "@commitlint/travis-cli": "7.5.2",
+    "@semantic-release/apm-config": "6.0.1",
+    "eslint": "5.15.3",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.16.0",
+    "husky": "1.3.1",
+    "jasmine-fix": "1.3.1",
+    "semantic-release": "15.13.3"
+  },
+  "engines": {
+    "atom": ">=1.8.0 <2.0.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+      "global-require": "off",
+      "import/no-unresolved": [
+        "error",
+        {
+          "ignore": [
+            "atom"
+          ]
+        }
+      ]
+    },
+    "globals": {
+      "atom": true
+    },
+    "env": {
+      "node": true,
+      "browser": true
+    }
+  },
+  "homepage": "https://github.com/AtomLinter/linter-phpcs#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "license": "MIT",
+  "main": "./lib/main.js",
+  "name": "linter-phpcs",
+  "package-deps": [
+    "linter:2.0.0"
+  ],
+  "private": true,
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "2.0.0": "provideLinter"
+      }
+    }
+  },
+  "release": {
+    "extends": "@semantic-release/apm-config"
+  },
+  "renovate": {
+    "extends": [
+      "config:base"
+    ],
+    "packageRules": [
+      {
+        "packagePatterns": [
+          "^eslint"
+        ],
+        "groupName": "ESLint packages"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtomLinter/linter-phpcs.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "apm test"
+  },
+  "version": "1.6.13"
+}

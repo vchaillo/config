@@ -20,5 +20,6 @@
     showDiffIconGutter: true
   "line-ending-selector":
     defaultLineEnding: "LF"
+  "linter-phpcs": {}
   welcome:
     showOnStartup: false

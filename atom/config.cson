@@ -12,11 +12,13 @@
     uriHandlerRegistration: "always"
   editor:
     showInvisibles: true
+    tabLength: 4
   "exception-reporting":
     userId: "b72e9372-5541-47bf-81a6-b5b003aeb9a3"
-  "git-diff":
-    showIconsInEditorGutter: true
+  "git-diff": {}
   github:
     showDiffIconGutter: true
+  "line-ending-selector":
+    defaultLineEnding: "LF"
   welcome:
     showOnStartup: false

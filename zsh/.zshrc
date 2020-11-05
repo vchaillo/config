@@ -89,6 +89,8 @@ export PATH=$PATH:/etc/PhpStorm-172.3544.41/bin/
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export LS_COLORS="$LS_COLORS:ow=36:"
+
 alias l1="ls -1"
 alias rmd="rm -rf"
 alias gccw="gcc -Wall -Wextra -Werror"

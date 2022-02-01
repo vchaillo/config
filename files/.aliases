@@ -1,0 +1,7 @@
+alias lsr="ls -R"
+alias l1="ls -1"
+
+alias rm="rm -v"
+alias rmd="rm -rf"
+
+alias gdw="git diff -w"

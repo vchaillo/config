@@ -1,7 +1,11 @@
+alias rmrf="rm -rf"
+alias rmf="rm -f"
+alias rmr="rm -r"
+alias rmd="rm -r"
+
 alias lsr="ls -R"
 alias l1="ls -1"
 
-alias rm="rm -v"
-alias rmd="rm -rf"
-
 alias gdw="git diff -w"
+
+alias explorer="explorer.exe"

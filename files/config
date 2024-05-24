@@ -1,0 +1,4 @@
+Host bellon
+	HostName 172.16.110.111
+	User adm_2b
+	# IdentityFile ~/.ssh/ed_25519.key

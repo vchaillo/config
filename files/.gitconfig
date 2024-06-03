@@ -1,0 +1,7 @@
+[user]
+	email = vchaillo@student.42.fr
+	name = vchaillo
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
